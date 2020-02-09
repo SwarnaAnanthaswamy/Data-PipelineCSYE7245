@@ -17,12 +17,6 @@ To build and deploy a data pipeline for scraping EDGAR data for given CIK, year,
 
 ![image](https://lh5.googleusercontent.com/wXMLExJ3q7RqoUH3BuakAnMwtL-l46UxZPGL2dUG6V5UfTvxQquUZCXqr0sXaso9TwEi0Q6-3IQp8hsVN7NDRxeA5RqEGg0GkiZE7CToiQdJ20FMYRArr6B4UNpSD6GFJSt9gvU2)
 
-
-#### Present Challenges
- 1) The code runs on Google Compute Engine without any issues. However, on Dataflow - there is an issue with the Google Storage package         being installed on the Worker nodes.
- 2) Alternative Packages like Datalab.storage were used, but no luck with it as well.
- 3) Multiple versions of Python used - 2.x and 3.x
- 
  #### Future Enhancements
  1) Invoke the process automatically as soon as a file is placed in the target folder on Google Bucket
  2) Connect reporting & visualization tools like Google Data Studio to easily analyze and visualize the output
