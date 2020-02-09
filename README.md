@@ -1,4 +1,4 @@
-# Data Pipeline 7245
+# CSYE7245 33701 Big Data Sys & Int Analytics ( Product Grade Pipelines )
 
 ### Assignment 1
 CodeLab Link for Assignment - 1 : https://codelabs-preview.appspot.com/?file_id=1UTP09POdcHQ4_5H12JsMnNe_6pcy2shLs6fOHz786tQ#0
