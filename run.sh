@@ -1,4 +1,4 @@
-python 0131_scrapeSEC.py \
+python 0131_finaldcrape.py \
 	--project encoded-site-265218 \
 	--runner DataflowRunner \
 	--staging_location gs://demo-temp-bucket/staging \
