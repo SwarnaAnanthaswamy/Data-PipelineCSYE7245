@@ -101,4 +101,4 @@ To build and deploy a data pipeline for scraping EDGAR data for given CIK, year,
 CodeLab Link for Assignment - 1 : https://docs.google.com/document/d/1d_5CKQYNGdQ2LycFFG-gkZrkSer-Rhtw61zuu1IGYjo/edit
 
 #### Flow Diagram
-![image](1.png)
+![image](https://user-images.githubusercontent.com/47194856/75589373-95777300-5a48-11ea-85c7-805dd7ac0cfc.png)
