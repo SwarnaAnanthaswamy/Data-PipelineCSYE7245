@@ -97,3 +97,8 @@ To build and deploy a data pipeline for scraping EDGAR data for given CIK, year,
      To delete the bucket, click Delete delete.
  
 ****************************************************************************************************************************************
+### Assignment 2
+CodeLab Link for Assignment - 1 : https://docs.google.com/document/d/1d_5CKQYNGdQ2LycFFG-gkZrkSer-Rhtw61zuu1IGYjo/edit
+
+#### Flow Diagram
+![image](1.png)
