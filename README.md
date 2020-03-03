@@ -178,10 +178,10 @@ Use the IMDB Dataset as the base model - and apply transfer learning to train th
 Step 1 :If you already have an active key created , configure AWS in the Command Line Interface using the following command :
 
 $ aws configure
-AWS Access Key ID [None]: <enter Access Key>
-AWS Secret Access Key [None]: <enter Secret Access Key?
-Default region name [None]: us-east-2
-Default output format [None]: 
+	AWS Access Key ID [None]: <enter Access Key>
+	AWS Secret Access Key [None]: <enter Secret Access Key?
+	Default region name [None]: us-east-2
+	Default output format [None]: 
 
 Step 2 :If your AWS account is not set up, follow the below mentioned steps :
 
