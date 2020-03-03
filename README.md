@@ -171,5 +171,30 @@ Use the IMDB Dataset as the base model - and apply transfer learning to train th
 - Maintain model versioning on S3 Bucket, in order to revert to older models (if necessary) when the latest model is not         performing as expected.
 - Connect reporting & visualization tools like Google Data Studio to easily analyze and visualize the output.
 
+ #### Steps to run this assignment
+ 
+ 1. AWS Comprehend Set up :
+
+Step 1 :If you already have an active key created , configure AWS in the Command Line Interface using the following command :
+
+$ aws configure
+AWS Access Key ID [None]: <enter Access Key>
+AWS Secret Access Key [None]: <enter Secret Access Key?
+Default region name [None]: us-east-2
+Default output format [None]: 
+
+Step 2 :If your AWS account is not set up, follow the below mentioned steps :
+
+- Create a new user under IAM Services (in AWS Console) if not created already. Select both Programmatic access and AWS Management Console for Access Type
+- Make sure to assign the following policy to the user - ComprehendFullAccess
+- When the user is successfully created, the Access ID key and the Secret access key are displayed.( NOTE : The secret access key is displayed just once at the time of creation. If you forget the Secret access key, you can always create a new Access Key)
+- Use these keys to configure AWS as described in Step 1.
+Reference - https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html
+
+Step 3 :The libraries to be imported are :
+- Boto3 - pip install boto3
+- Json - pip install json
+
+
 
 ******************************************************************************************************************************
