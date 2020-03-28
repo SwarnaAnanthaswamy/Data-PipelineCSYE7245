@@ -34,7 +34,7 @@ def load_data():
 
     print('Input Data Downloaded')
 
-    data = pd.read_csv('down_data.csv', header=None)
+    data = pd.read_csv('down_data.csv', skiprows=1 ,header=None)
     return data
 
 
@@ -55,19 +55,41 @@ def evaluatefun():
     from sdgym.synthesizers import IndependentSynthesizer
     from sdgym.evaluate import evaluate
 
-    from sdgym.data import load_dataset
-    train, test, meta, categoricals, ordinals = load_dataset('adult', benchmark=True)
-    synthesizer = IndependentSynthesizer()
-    synthesizer.fit(train, categoricals, ordinals)
-    sampled = synthesizer.sample(300)
-    print('Sampled Data for 300 records\n')
-    scores = evaluate(train, test, sampled, meta)
+    data = np.loadtxt('down_data.csv', delimiter=',', skiprows=1)
+
+    with open('generated_metadata.json') as data_file:
+        data2 = json.load(data_file)
+
+    categorical_columns = list()
+    ordinal_columns = list()
+
+    for column_idx, column in enumerate(data2['columns']):
+
+        if column['type'] == CATEGORICAL:
+            print(column)
+            print('Classified as Categorical')
+            categorical_columns.append(column_idx)
+        elif column['type'] == ORDINAL:
+            ordinal_columns.append(column_idx)
+            print(column)
+            print('Classified as Ordinal')
+
+    synthesizer = IdentitySynthesizer()
+    synthesizer.fit(data, categorical_columns, ordinal_columns)
+    scores = benchmark(synthesizer.fit_sample)
+
     scores['Synth'] = 'IdentitySynthesizer'
-    scores2 = (evaluate(train, test, sampled, meta))
+    synthesizer = UniformSynthesizer()
+    synthesizer.fit(data, categorical_columns, ordinal_columns)
+    scores2 = benchmark(synthesizer.fit_sample)
     scores2['Synth'] = 'Uniform'
-    scores3 = (evaluate(train, test, sampled, meta))
+    synthesizer = IndependentSynthesizer()
+    synthesizer.fit(data, categorical_columns, ordinal_columns)
+    scores3= benchmark(synthesizer.fit_sample)
     scores3['Synth'] = 'Identity'
-    scores4 = (evaluate(train, test, sampled, meta))
+    synthesizer = CLBNSynthesizer()
+    synthesizer.fit(data, categorical_columns, ordinal_columns)
+    scores4 = benchmark(synthesizer.fit_sample)
     scores4['Synth'] = 'CLBN'
     print('\nEvaluation Scores from evaluate function:\n')
 
