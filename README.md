@@ -228,5 +228,17 @@ Designed the infrastructure that can be used irrespective of the number of datas
 - An aggregator function collates all the benchmarked results and chooses the synthesizer with the highest score
 - The output from the best performing synthesizer and the benchmarking results are pushed to S3 
 
+#Streamlit
+
+![image](https://user-images.githubusercontent.com/47194856/77825276-91d61b00-70de-11ea-95d4-8d722a3ead38.png)
+
+- The user can link the CSV file of choice on the Streamlit WebApp
+- The underlying code fetches the CSV file from the S3 Bucket 
+- JSON metadata is generated for the CSV file
+- On choosing the synthesizer of choice - Data is synthesized and displayed on the WebApp
+- On choosing the Benchmarking option - the user is presented with the benchmarking results
+
+****************************************************************************************************************************************
+
 
 
