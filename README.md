@@ -213,3 +213,20 @@ Designed the infrastructure that can be used irrespective of the number of datas
  - Web App: Docker + Flask for API Management, Apache Airflow for Pipeline, Streamlit
 
 #### Flow Diagram
+![image](https://user-images.githubusercontent.com/47194856/77825152-dc0acc80-70dd-11ea-8287-d052ef09e308.png)
+
+- The API call is made along with the link to the Data File stored on S3 
+- API request yields the data from S3 Bucket and the file is used as an input for the Apache Airflow pipeline 
+- API request invokes the Airflow pipeline to generate synthetic data
+- The pipeline takes the input data and generates the JSON metadata - which has the list of fields, unique/continuous values and  	   categorizes the fields into two buckets:
+	Categorical 
+	Ordinal
+- The JSON is pushed to the S3 bucket and used in subsequent benchmarking and data synthesis processes
+- Multiple Data Synthesizers are invoked in parallel - to synthesize data using the base dataset and the generated JSON file 
+- The outputs from all synthesizers are converted to CSVs and pushed to S3
+- The benchmarking process is invoked in parallel and the outputs are collated from all the benchmarking processes
+- An aggregator function collates all the benchmarked results and chooses the synthesizer with the highest score
+- The output from the best performing synthesizer and the benchmarking results are pushed to S3 
+
+
+
