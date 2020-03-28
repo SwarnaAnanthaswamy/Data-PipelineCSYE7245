@@ -198,3 +198,18 @@ Step 3 :The libraries to be imported are :
 
 
 ******************************************************************************************************************************
+
+### Assignment 3
+CodeLab Link for Assignment - 1 : https://codelabs-preview.appspot.com/?file_id=1ZUL_SuGVHo_5cqvFfjFtUQQmX3SZhX4w-oFnoEHchhg#0
+
+#### Objective
+Developed a scalable data pipeline to train and benchmark multiple synthetic data generators and then deploy them in production.
+Designed the infrastructure that can be used irrespective of the number of datasets and generalized the application so that it can be used with new datasets. 
+
+
+#### Tools
+ - Pipeline: Airflow
+ - AWS Tools: AWS S3 
+ - Web App: Docker + Flask for API Management, Apache Airflow for Pipeline, Streamlit
+
+#### Flow Diagram
