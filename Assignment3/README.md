@@ -33,15 +33,13 @@ Designed the infrastructure that can be used irrespective of the number of datas
 - An aggregator function collates all the benchmarked results and chooses the synthesizer with the highest score
 - The output from the best performing synthesizer and the benchmarking results are pushed to S3 
 
-####Streamlit
+#### Streamlit
 
 Setup: Install streamlit via pip 
 
 `pip install streamlit` 
 
 Any streamlit app can be run by invoking the following command `streamlit run MyPythonScript.py`
-For the following use case - trigger the Streamlit app by running `streamlit run streamlitdemo2`
-
 
 ![image](https://user-images.githubusercontent.com/47194856/77825276-91d61b00-70de-11ea-95d4-8d722a3ead38.png)
 
@@ -52,6 +50,20 @@ For the following use case - trigger the Streamlit app by running `streamlit run
 - On choosing the Benchmarking option - the user is presented with the benchmarking results
 
 ****************************************************************************************************************************************
+
+#### Running the Pipeline 
+
+
+##### Streamlit 
+
+Start the Streamlit application by running the folllwing command `streamlit run streamlitdemo2`
+
+##### Airflow Pipelines
+
+Start the scheduler:
+
+Run the Pipelines:
+
 
 Python Dependencies: 
 
