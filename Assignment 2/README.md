@@ -97,5 +97,15 @@ Step 3 :The libraries to be imported are :
 - Boto3 - `pip install boto3`
 - Json - `pip install json`
 
+ 2. Run Metaflow pipelines :
+ 
+ There are two Metaflow pipelines present in this project - annotationPipeline.py and inferencePipeline.py
+- To run the pipelines, make sure you navigate to the folder wheere the scripts reside in your CLI.
+- To view the steps of the pipeline,run the following command depending on which pipeline you intend to run
+	`python annotationPipeline.py show` or `python inferencePipeline.py show`
+- To start and execute the pipeline,run the following command depending on which pipeline you intend to run
+	`python annotationPipeline.py run` or `python inferencePipeline.py run`
+
+
 
 
