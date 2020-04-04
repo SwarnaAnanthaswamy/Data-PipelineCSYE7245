@@ -228,7 +228,7 @@ Designed the infrastructure that can be used irrespective of the number of datas
 - An aggregator function collates all the benchmarked results and chooses the synthesizer with the highest score
 - The output from the best performing synthesizer and the benchmarking results are pushed to S3 
 
-#Streamlit
+# Streamlit
 
 ![image](https://user-images.githubusercontent.com/47194856/77825276-91d61b00-70de-11ea-95d4-8d722a3ead38.png)
 
@@ -237,6 +237,22 @@ Designed the infrastructure that can be used irrespective of the number of datas
 - JSON metadata is generated for the CSV file
 - On choosing the synthesizer of choice - Data is synthesized and displayed on the WebApp
 - On choosing the Benchmarking option - the user is presented with the benchmarking results
+
+
+# Airflow setup to run pipeline
+
+- Install Apache Airflow in your CLI using the following command 
+	`pip install apache-airflow`
+- Initialize the database using the following command 
+	`airflow initdb`
+- Place the pipeline script (tutorial.py in our case) in the ~/airflow/dags folder.
+- Start the scheduler using the following command 
+	`airflow scheduler`
+- Start the webserver using the following command 
+	`airflow webserver -p 8081`
+- Visit localhost:8081 in the browser to view the DAGs
+- The name of our DAG is 'Assignment3-Final' (NOTE : The name of the DAG is NOT the same as the name of the python script)
+- Run the DAG by clicking on 'Trigger' button on the UI
 
 ****************************************************************************************************************************************
 
