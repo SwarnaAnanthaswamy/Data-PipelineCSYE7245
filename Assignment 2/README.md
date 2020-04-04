@@ -1,6 +1,6 @@
 ****************************************************************************************************************************************
 ### Assignment 2
-CodeLab Link for Assignment - 1 : https://docs.google.com/document/d/1d_5CKQYNGdQ2LycFFG-gkZrkSer-Rhtw61zuu1IGYjo/edit
+CodeLab Link for Assignment - 2 : https://docs.google.com/document/d/1d_5CKQYNGdQ2LycFFG-gkZrkSer-Rhtw61zuu1IGYjo/edit
 
 #### Objective
 
@@ -75,7 +75,7 @@ Use the IMDB Dataset as the base model - and apply transfer learning to train th
 
  #### Steps to run this assignment
  
- 1. AWS Comprehend Set up :
+ #### 1. AWS Comprehend Set up :
 
 Step 1 :If you already have an active key created , configure AWS in the Command Line Interface using the following command :
 
@@ -97,7 +97,7 @@ Step 3 :The libraries to be imported are :
 - Boto3 - `pip install boto3`
 - Json - `pip install json`
 
- 2. Run Metaflow pipelines :
+ #### 2. Run Metaflow pipelines :
  
  There are two Metaflow pipelines present in this project - annotationPipeline.py and inferencePipeline.py
 - To run the pipelines, make sure you navigate to the folder wheere the scripts reside in your CLI.
