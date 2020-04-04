@@ -5,7 +5,7 @@
 ******************************************************************************************************************************
 
 ### Assignment 3
-CodeLab Link for Assignment - 1 : https://codelabs-preview.appspot.com/?file_id=1ZUL_SuGVHo_5cqvFfjFtUQQmX3SZhX4w-oFnoEHchhg#0
+CodeLab Link for Assignment - 3 : https://codelabs-preview.appspot.com/?file_id=1ZUL_SuGVHo_5cqvFfjFtUQQmX3SZhX4w-oFnoEHchhg#0
 
 #### Objective
 Developed a scalable data pipeline to train and benchmark multiple synthetic data generators and then deploy them in production.
