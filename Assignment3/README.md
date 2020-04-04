@@ -58,11 +58,21 @@ Any streamlit app can be run by invoking the following command `streamlit run My
 
 Start the Streamlit application by running the folllwing command `streamlit run streamlitdemo2`
 
-##### Airflow Pipelines
+##### Airflow setup to run the Pipeline
 
-Start the scheduler:
 
-Run the Pipelines:
+- Install Apache Airflow in your CLI using the following command 
+	`pip install apache-airflow`
+- Initialize the database using the following command 
+	`airflow initdb`
+- Place the pipeline script (tutorial.py in our case) in the ~/airflow/dags folder.
+- Start the scheduler using the following command 
+	`airflow scheduler`
+- Start the webserver using the following command 
+	`airflow webserver -p 8081`
+- Visit localhost:8081 in the browser to view the DAGs
+- The name of our DAG is 'Assignment3-Final' (NOTE : The name of the DAG is NOT the same as the name of the python script)
+- Run the DAG by clicking on 'Trigger' button on the UI
 
 
 #### Python Dependencies: 
