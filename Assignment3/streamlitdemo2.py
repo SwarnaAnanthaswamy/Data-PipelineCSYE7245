@@ -22,8 +22,8 @@ user_input = st.text_input("Link to Data File", 'https://csye7245-1.s3.amazonaws
 
 def load_data():
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAIL7ELCOTK5XDIBWQ',
-                        aws_secret_access_key='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')
+                        aws_access_key_id='',
+                        aws_secret_access_key='')
 
     s3_path = 'analyze/' + os.path.basename(user_input)
     s3.Bucket('csye7245-1').download_file(
