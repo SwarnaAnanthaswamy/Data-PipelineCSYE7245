@@ -30,8 +30,8 @@ def getData():
     # secret_access_key = config.get('aws', 'secret_access_key')
     # session_token = config.get('aws', 'session_token')
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAXS4YFCA64NXDUSGG',
-                        aws_secret_access_key='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',
+                        aws_access_key_id='',
+                        aws_secret_access_key='',
                         )
 
     s3.Bucket('csye7245-1').download_file(
@@ -92,8 +92,8 @@ def uploadData():
     # session_token = config.get('aws', 'session_token')
 
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAXS4YFCA64NXDUSGG',
-                        aws_secret_access_key='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',
+                        aws_access_key_id='',
+                        aws_secret_access_key='',
                         )
 
     s3.Bucket('csye7245-1').upload_file(
@@ -144,8 +144,8 @@ def uniformSynth():
     print('Data Synthesized using Uniform Synthesizer')
 
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAXS4YFCA64NXDUSGG',
-                        aws_secret_access_key='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',
+                        aws_access_key_id='',
+                        aws_secret_access_key='',
                         )
 
     s3.Bucket('csye7245-1').upload_file(
@@ -190,8 +190,8 @@ def independentSynth():
     print('Data Synthesized using Independent Synthesizer')
 
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAXS4YFCA64NXDUSGG',
-                        aws_secret_access_key='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',
+                        aws_access_key_id='',
+                        aws_secret_access_key='',
                         )
 
     s3.Bucket('csye7245-1').upload_file(
@@ -238,8 +238,8 @@ def identitySynth():
     print('Data Synthesized using Identity synthesizer')
 
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAXS4YFCA64NXDUSGG',
-                        aws_secret_access_key='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',
+                        aws_access_key_id='',
+                        aws_secret_access_key='',
                         )
 
     s3.Bucket('csye7245-1').upload_file(
@@ -286,8 +286,8 @@ def CLBNSynth():
     print('Data Synthesized using CLBN Synthesizer')
 
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAXS4YFCA64NXDUSGG',
-                        aws_secret_access_key='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',
+                        aws_access_key_id='',
+                        aws_secret_access_key='',
                         )
 
     s3.Bucket('csye7245-1').upload_file(
@@ -373,8 +373,8 @@ def compareBenchmarks():
     import boto3
 
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIAXS4YFCA64NXDUSGG',
-                        aws_secret_access_key='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',
+                        aws_access_key_id='',
+                        aws_secret_access_key='',
                         )
 
     s3.Bucket('csye7245-1').download_file(
